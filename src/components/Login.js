@@ -1,17 +1,14 @@
 import React, {useRef, useState } from 'react';
-import Header from './Header';
 import {checkValidData} from '../utils/checkValidData';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from "../utils/userSlice"
-
+import { USER_AVATAR } from '../utils/constants';
+import Header from './Header';
 
 
 const Login = () => {
-
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const[isSignInForm, setIsSignInForm] = useState(true);
   const[errorMessage, setErrormessage]  = useState(null)
@@ -35,9 +32,9 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up 
           const user = userCredential.user;
-          
           updateProfile(user, {
-          displayName: name.current.value, photoURL: "https://avatars.githubusercontent.com/u/132843327?s=16&v=4",
+          displayName: name.current.value,
+          photoURL:  USER_AVATAR ,
         })
         .then(() => {
           const {uid, email, displayName, photoURL} = auth.currentUser;
@@ -49,7 +46,7 @@ const Login = () => {
               photoURL: photoURL,
             })
          );
-          navigate("/browse");
+         
         })
         .catch((error) => {
           setErrormessage(error.message);
@@ -66,12 +63,14 @@ const Login = () => {
     else{
     // Sign In Logic
 
-    signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+    signInWithEmailAndPassword(
+      auth, 
+      email.current.value, 
+      password.current.value
+    )
     .then((userCredential) => {
       // Signed in 
-      const user = userCredential.user;
-       console.log(user);
-       navigate('/browse'); 
+      const user = userCredential.user; 
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -88,7 +87,7 @@ const toggleSignInForm = () => {
 }
   return (
     <div >
-      <Header />
+      <Header/>
         <div className='absolute'>
         <img
           src='https://assets.nflxext.com/ffe/siteui/vlv3/150c4b42-11f6-4576-a00f-c631308b1e43/web/IN-en-20241216-TRIFECTA-perspective_915a9055-68ad-4e81-b19a-442f1cd134dc_large.jpg'
