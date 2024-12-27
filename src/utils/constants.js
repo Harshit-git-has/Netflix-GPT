@@ -11,3 +11,6 @@
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZWMwZDUwYzAxNTY3NjkwYjBmNWI1OTVmYTM5Mjc4OSIsIm5iZiI6MTczNTAxNjc0MS41MjcsInN1YiI6IjY3NmE0MTI1ZjY4ZGMxMThmNzdlYzAzNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sCtGJ9WAxuoHEfeb8W6djNmilO09DDB4z8KU8XKvIRs'
     },
   };
+
+  export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500";
+
