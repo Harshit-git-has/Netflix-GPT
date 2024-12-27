@@ -4,7 +4,7 @@ import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfil
 import { auth } from '../utils/firebase';
 import { useDispatch } from 'react-redux';
 import { addUser } from "../utils/userSlice"
-import { USER_AVATAR } from '../utils/constants';
+import { BG_URL, USER_AVATAR } from '../utils/constants';
 import Header from './Header';
 
 
@@ -90,7 +90,7 @@ const toggleSignInForm = () => {
       <Header/>
         <div className='absolute'>
         <img
-          src='https://assets.nflxext.com/ffe/siteui/vlv3/150c4b42-11f6-4576-a00f-c631308b1e43/web/IN-en-20241216-TRIFECTA-perspective_915a9055-68ad-4e81-b19a-442f1cd134dc_large.jpg'
+          src={BG_URL}
           alt='BG-logo' 
         />
       </div>

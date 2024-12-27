@@ -34,18 +34,17 @@
 - Made The Browser page amazing with TAilwind CSS
 - UsePopularMovies custom hooks
 - useTopRatedMovies, useTrendingMovies, useUpcomingMovies & useUpcomingMovies
-
-
+- GPT search bar
 
 
 - Features
-  - Login/Sign Up
-    - Sign In / sign Up Form
-    - Redirect to browse page
+   - Login/Sign Up
+     - Sign In / sign Up Form
+     - Redirect to browse page
 - Browse ( After Authentication)
     - Header
     - Main Movie
       - Trailer
       - Title & description
       - Movie Suggestions
-         - MovieList * N
+        - MovieList * N
