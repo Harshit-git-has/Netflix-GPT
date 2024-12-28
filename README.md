@@ -35,6 +35,8 @@
 - UsePopularMovies custom hooks
 - useTopRatedMovies, useTrendingMovies, useUpcomingMovies & useUpcomingMovies
 - GPT search bar
+- Multi-Language feature in our app
+- 
 
 
 - Features
