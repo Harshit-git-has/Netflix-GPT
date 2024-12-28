@@ -23,4 +23,4 @@
     { identifier: "spanish", name: "Spanish" },
   ];
 
-   export const OPENAI_KEY = "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";
+   export const OPENAI_KEY = "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"
