@@ -8,7 +8,8 @@
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZWMwZDUwYzAxNTY3NjkwYjBmNWI1OTVmYTM5Mjc4OSIsIm5iZiI6MTczNTAxNjc0MS41MjcsInN1YiI6IjY3NmE0MTI1ZjY4ZGMxMThmNzdlYzAzNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sCtGJ9WAxuoHEfeb8W6djNmilO09DDB4z8KU8XKvIRs"
+      Authorization: 
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZWMwZDUwYzAxNTY3NjkwYjBmNWI1OTVmYTM5Mjc4OSIsIm5iZiI6MTczNTAxNjc0MS41MjcsInN1YiI6IjY3NmE0MTI1ZjY4ZGMxMThmNzdlYzAzNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sCtGJ9WAxuoHEfeb8W6djNmilO09DDB4z8KU8XKvIRs"
     },
   };
 
@@ -23,4 +24,4 @@
     { identifier: "spanish", name: "Spanish" },
   ];
 
-  //  export const OPENAI_KEY = "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"
+   export const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
